@@ -1,0 +1,103 @@
+// CSS custom properties for theme settings
+:root {
+  --button-color: #{$button_color};
+  --button-hover-color: #{$button_hover_color};
+}
+
+// Hide the default new topic button when our custom button is present
+#create-post-custom ~ .fk-d-button-tooltip,
+#create-post-custom ~ #create-topic {
+  display: none;
+}
+
+// Blue styling for both the original and custom "Create a Post" button
+#create-topic,
+button#create-topic,
+#create-post-custom,
+.create-post-button {
+  background: var(--button-color, #007cba) !important;
+  border: 2px solid var(--button-color, #007cba) !important;
+  color: #ffffff !important;
+  transition: all 0.25s ease-out !important;
+
+  .d-icon {
+    color: #ffffff !important;
+  }
+
+  &:hover,
+  &:focus {
+    background: var(--button-hover-color, #005a87) !important;
+    border-color: var(--button-hover-color, #005a87) !important;
+    color: #ffffff !important;
+
+    .d-icon {
+      color: #ffffff !important;
+    }
+  }
+
+  &:active {
+    background: var(--button-hover-color, #005a87) !important;
+    border-color: var(--button-hover-color, #005a87) !important;
+    filter: brightness(0.9);
+  }
+
+  // Handle the open draft state
+  &.open-draft {
+    background: var(--button-color, #007cba) !important;
+    border: 2px solid var(--button-color, #007cba) !important;
+
+    &:hover,
+    &:focus {
+      background: var(--button-hover-color, #005a87) !important;
+      border-color: var(--button-hover-color, #005a87) !important;
+      color: #ffffff !important;
+
+      .d-icon {
+        color: #ffffff !important;
+      }
+    }
+  }
+}
+
+// Ensure the button styling works in all contexts
+.navigation-container #create-topic,
+.topic-footer-main-buttons #create-topic,
+.topic-list-header #create-topic,
+.category-header-widget #create-topic {
+  background: var(--button-color, #007cba) !important;
+  border: 2px solid var(--button-color, #007cba) !important;
+  color: #ffffff !important;
+
+  .d-icon {
+    color: #ffffff !important;
+  }
+
+  &:hover,
+  &:focus {
+    background: var(--button-hover-color, #005a87) !important;
+    border-color: var(--button-hover-color, #005a87) !important;
+    color: #ffffff !important;
+
+    .d-icon {
+      color: #ffffff !important;
+    }
+  }
+}
+
+// Mobile responsive adjustments
+@media screen and (max-width: 767px) {
+  #create-topic,
+  button#create-topic,
+  #create-post-custom,
+  .create-post-button {
+    background: var(--button-color, #007cba) !important;
+    border: 2px solid var(--button-color, #007cba) !important;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: var(--button-hover-color, #005a87) !important;
+      border-color: var(--button-hover-color, #005a87) !important;
+    }
+  }
+}

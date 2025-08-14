@@ -1,0 +1,11 @@
+{
+  "name": "Create a Post Button Theme",
+  "about_url": null,
+  "license_url": null,
+  "authors": "Custom Theme Component",
+  "theme_version": "1.0.0",
+  "minimum_discourse_version": "3.1.0",
+  "component": true,
+  "assets": {},
+  "color_schemes": {}
+}

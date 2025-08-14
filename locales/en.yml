@@ -1,0 +1,12 @@
+en:
+  theme_metadata:
+    settings:
+      button_text: "Button Text"
+      button_color: "Button Color"
+      button_hover_color: "Button Hover Color"
+      enable_custom_styling: "Enable Custom Styling"
+    description:
+      button_text: "The text to display on the new topic button"
+      button_color: "Primary color for the button (hex color code)"
+      button_hover_color: "Hover color for the button (hex color code)"
+      enable_custom_styling: "Enable custom blue styling for the button"

@@ -1,0 +1,15 @@
+button_text:
+  default: "Create a Post"
+  description: "Text to display on the new topic button"
+
+button_color:
+  default: "#007cba"
+  description: "Primary color for the button (hex color code)"
+
+button_hover_color:
+  default: "#005a87"
+  description: "Hover color for the button (hex color code)"
+
+enable_custom_styling:
+  default: true
+  description: "Enable custom blue styling for the button"
