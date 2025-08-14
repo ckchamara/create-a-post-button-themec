@@ -2,6 +2,7 @@
 :root {
   --button-color: #{$button_color};
   --button-hover-color: #{$button_hover_color};
+  --button-active-color: #004080;
 }
 
 // Hide the default new topic button when our custom button is present
@@ -10,15 +11,18 @@
   display: none;
 }
 
-// Blue styling for both the original and custom "Create a Post" button
+// Enhanced styling for both the original and custom "Create a Post" button
 #create-topic,
 button#create-topic,
 #create-post-custom,
 .create-post-button {
-  background: var(--button-color, #007cba) !important;
-  border: 2px solid var(--button-color, #007cba) !important;
+  background: var(--button-color, #0066cc) !important;
+  border: 2px solid var(--button-color, #0066cc) !important;
+  border-radius: 6px !important;
   color: #ffffff !important;
-  transition: all 0.25s ease-out !important;
+  font-weight: 600 !important;
+  box-shadow: 0 2px 4px rgba(0, 102, 204, 0.2) !important;
+  transition: all 0.2s ease-in-out !important;
 
   .d-icon {
     color: #ffffff !important;
@@ -26,9 +30,11 @@ button#create-topic,
 
   &:hover,
   &:focus {
-    background: var(--button-hover-color, #005a87) !important;
-    border-color: var(--button-hover-color, #005a87) !important;
+    background: var(--button-hover-color, #0052a3) !important;
+    border-color: var(--button-hover-color, #0052a3) !important;
     color: #ffffff !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(0, 102, 204, 0.3) !important;
 
     .d-icon {
       color: #ffffff !important;
@@ -36,21 +42,29 @@ button#create-topic,
   }
 
   &:active {
-    background: var(--button-hover-color, #005a87) !important;
-    border-color: var(--button-hover-color, #005a87) !important;
-    filter: brightness(0.9);
+    background: var(--button-active-color, #004080) !important;
+    border-color: var(--button-active-color, #004080) !important;
+    transform: translateY(0) !important;
+    box-shadow: 0 2px 4px rgba(0, 102, 204, 0.2) !important;
+  }
+
+  // Focus state for accessibility
+  &:focus {
+    outline: 2px solid #ffffff !important;
+    outline-offset: 2px !important;
   }
 
   // Handle the open draft state
   &.open-draft {
-    background: var(--button-color, #007cba) !important;
-    border: 2px solid var(--button-color, #007cba) !important;
+    background: var(--button-color, #0066cc) !important;
+    border: 2px solid var(--button-color, #0066cc) !important;
 
     &:hover,
     &:focus {
-      background: var(--button-hover-color, #005a87) !important;
-      border-color: var(--button-hover-color, #005a87) !important;
+      background: var(--button-hover-color, #0052a3) !important;
+      border-color: var(--button-hover-color, #0052a3) !important;
       color: #ffffff !important;
+      transform: translateY(-1px) !important;
 
       .d-icon {
         color: #ffffff !important;
@@ -59,14 +73,17 @@ button#create-topic,
   }
 }
 
-// Ensure the button styling works in all contexts
+// Ensure the enhanced styling works in all contexts
 .navigation-container #create-topic,
 .topic-footer-main-buttons #create-topic,
 .topic-list-header #create-topic,
 .category-header-widget #create-topic {
-  background: var(--button-color, #007cba) !important;
-  border: 2px solid var(--button-color, #007cba) !important;
+  background: var(--button-color, #0066cc) !important;
+  border: 2px solid var(--button-color, #0066cc) !important;
+  border-radius: 6px !important;
   color: #ffffff !important;
+  font-weight: 600 !important;
+  box-shadow: 0 2px 4px rgba(0, 102, 204, 0.2) !important;
 
   .d-icon {
     color: #ffffff !important;
@@ -74,9 +91,11 @@ button#create-topic,
 
   &:hover,
   &:focus {
-    background: var(--button-hover-color, #005a87) !important;
-    border-color: var(--button-hover-color, #005a87) !important;
+    background: var(--button-hover-color, #0052a3) !important;
+    border-color: var(--button-hover-color, #0052a3) !important;
     color: #ffffff !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(0, 102, 204, 0.3) !important;
 
     .d-icon {
       color: #ffffff !important;
@@ -84,20 +103,23 @@ button#create-topic,
   }
 }
 
-// Mobile responsive adjustments
+// Mobile responsive adjustments - preserve original sizing
 @media screen and (max-width: 767px) {
   #create-topic,
   button#create-topic,
   #create-post-custom,
   .create-post-button {
-    background: var(--button-color, #007cba) !important;
-    border: 2px solid var(--button-color, #007cba) !important;
+    background: var(--button-color, #0066cc) !important;
+    border: 2px solid var(--button-color, #0066cc) !important;
+    border-radius: 6px !important;
+    font-weight: 600 !important;
 
     &:hover,
     &:focus,
     &:active {
-      background: var(--button-hover-color, #005a87) !important;
-      border-color: var(--button-hover-color, #005a87) !important;
+      background: var(--button-hover-color, #0052a3) !important;
+      border-color: var(--button-hover-color, #0052a3) !important;
+      transform: none !important;
     }
   }
 }

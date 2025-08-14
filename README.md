@@ -5,8 +5,8 @@ A Discourse theme component that changes the "+ New Topic" button to say "Create
 ## Features
 
 - ✅ Changes "+ New Topic" button text to "Create a Post" globally
-- ✅ Blue color scheme (#007cba) with darker hover effect (#005a87)
-- ✅ Smooth transition animations (0.25s ease-out)
+- ✅ Modern vibrant blue color scheme (#0066cc) with darker hover effect (#0052a3)
+- ✅ Enhanced styling with rounded corners, shadows, and smooth animations
 - ✅ Works across all pages and contexts (topic lists, categories, inside topics)
 - ✅ Mobile responsive design
 - ✅ Compatible with latest Discourse versions (3.1.0+)
@@ -32,8 +32,8 @@ A Discourse theme component that changes the "+ New Topic" button to say "Create
 ### Configuration
 After installation, you can customize the theme in **Customize** > **Themes** > **Settings**:
 - **Button Text**: Change "Create a Post" to any text you prefer
-- **Button Color**: Customize the primary button color (default: #007cba)
-- **Button Hover Color**: Customize the hover effect color (default: #005a87)
+- **Button Color**: Customize the primary button color (default: #0066cc)
+- **Button Hover Color**: Customize the hover effect color (default: #0052a3)
 - **Enable Custom Styling**: Toggle the blue styling on/off
 
 ## Technical Details
@@ -55,9 +55,9 @@ After installation, you can customize the theme in **Customize** > **Themes** > 
 ```
 
 ### Color Scheme
-- **Primary Blue**: #007cba
-- **Hover Blue**: #005a87  
-- **Active Blue**: #004a73
+- **Primary Blue**: #0066cc (Modern Vibrant Blue)
+- **Hover Blue**: #0052a3 (Enhanced contrast)
+- **Active Blue**: #004080 (Pressed state)
 - **Text Color**: #ffffff (white)
 
 ### Browser Support
@@ -71,7 +71,7 @@ To modify the button text, edit the JavaScript files and change "Create a Post" 
 
 To modify colors, edit `common/common.scss` and update the color values:
 ```scss
-background: #007cba !important;  // Change this for different primary color
+background: #0066cc !important;  // Change this for different primary color
 ```
 
 ## Testing
@@ -79,8 +79,8 @@ background: #007cba !important;  // Change this for different primary color
 After installation, verify the theme component works by:
 
 1. **Check Button Text**: Navigate to any category or topic list - the button should say "Create a Post" instead of "+ New Topic"
-2. **Test Button Color**: The button should be blue (#007cba by default)
-3. **Test Hover Effect**: Hover over the button - it should smoothly transition to a darker blue (#005a87)
+2. **Test Button Color**: The button should be vibrant blue (#0066cc by default) with rounded corners and subtle shadow
+3. **Test Hover Effect**: Hover over the button - it should smoothly lift up and transition to a darker blue (#0052a3)
 4. **Test Functionality**: Click the button - it should open the composer to create a new topic
 5. **Test Mobile**: Check on mobile devices for responsive behavior
 6. **Test Different Pages**: Verify the button appears correctly on:

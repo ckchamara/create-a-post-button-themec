@@ -3,11 +3,11 @@ button_text:
   description: "Text to display on the new topic button"
 
 button_color:
-  default: "#007cba"
+  default: "#0066cc"
   description: "Primary color for the button (hex color code)"
 
 button_hover_color:
-  default: "#005a87"
+  default: "#0052a3"
   description: "Hover color for the button (hex color code)"
 
 enable_custom_styling:
